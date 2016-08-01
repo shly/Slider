@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<style type="text/css">
+		.slider_container{
+			width: 300px;
+			height: 200px;
+			position: relative;
+			overflow: hidden;
+		}
+		.slider_img{
+			position: relative;
+			width: 300%;
+			height: 200px;
+			font-size: 0px;
+			transition: left 1s;
+			left: 0px;
+		}
+		.slider_img img{
+			width: 300px;
+			height: 200px;
+			display: inline-block;
+		}
+		.slider_controller{
+			position: relative;
+			top:-17px;
+			background-color: rgba(00,00,00,0.8);
+			text-align: right;
+		}	
+		.slider_controller a{
+			text-decoration: none;
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			border-radius: 5px;
+			margin: 2px;
+			background-color: #AFAFAF;
+			font-size: 15px;
+			color: #FFF;
+			text-align: center;
+		}
+
+		#image_1:target ~ .slider_img{
+			left: 0px;	
+		}
+		#image_2:target ~ .slider_img{
+			left: -100%;	
+		}
+		#image_3:target ~ .slider_img{
+			left: -200%;	
+		}
+	</style>
+
+</head>
+<body>
+	<div class="slider_container">
+		<span id = "image_1"></span>
+		<span id = "image_2"></span>
+		<span id ="image_3"></span>
+		<div class="slider_img">
+			<img src="images/1.jpg">
+			<img src="images/2.jpg">
+			<img src="images/3.jpg">
+		</div>
+		<div class="slider_controller">
+			<a href="#image_1"></a>
+			<a href="#image_2"></a>
+			<a href="#image_3"></a>
+		</div>
+
+	</div>
+
+</body>
+</html>

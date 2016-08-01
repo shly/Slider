@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider</title>
+	<style type="text/css">
+	img{
+		width: 400px;
+		height: 200px;
+	}
+		.wrap{
+			width: 400px;
+			height: 200px;
+			position: relative;
+			overflow: hidden;
+		}
+		.pic{
+			width: 1200px;
+		}
+		.pic>div{
+			float: left;
+			width: 400px;
+			height: 200px;
+			background-color: #5dd94e;
+		}
+		#position{
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0;
+			background-color: #000;
+			opacity: 0.4
+			width:400px;
+			text-align: right;
+		}
+		#position li{
+			width: 10px;
+			height: 10px;
+			margin: 0 2px;
+			display: inline-block;
+			border-radius: 5px;
+			-webkit-border-radius: 5px; 
+			background-color: #AFAFAF;
+
+		}
+		#position li.cur{
+			background-color: #FF0000;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="pic">
+			<div><a href="javascript:;"><img src="images/1.jpg"></a></div>
+			<div><a href="javascript:;"><img src="images/2.jpg"></a></div>
+			<div><a href="javascript:;"><img src="images/3.jpg"></a></div>
+		</div>
+		<ul id="position">
+			<li class="cur"></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+	<script type="text/javascript">
+		document.getElementById('position').onclick = function(e){
+			if(e&&e.target.nodeName.toLowerCase() == 'li'){
+				document.querySelector(".cur").classList.remove("cur");
+				e.target.classList.add("cur");
+			}
+		}
+	</script>
+</body>
+</html>

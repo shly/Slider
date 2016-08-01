@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<style type="text/css">
+		.banner {
+		  width: 200px;
+		  height: 200px;
+		  position: relative;
+		  overflow: hidden; }
+
+		.part3 img {
+		  width: 200px;
+		  height: 200px; }
+
+		.show_image {
+		  width: 300%;
+		  height: 100%;
+		  position: relative;
+		  -webkit-transition: left .8s ease;
+		  transition: left .8s ease;
+		  left: 0;
+		  top: 0;
+		  font-size: 0;
+		  /*为了让内部的inline-block之间没有空隙*/ }
+
+		.show_image span {
+		  display: inline-block;
+		  width: 200px;
+		  height: 200px; }
+
+		#img_1:target ~ .show_image {
+		  left: 0; }
+
+		#img_2:target ~ .show_image {
+		  left: -100%; }
+
+		#img_3:target ~ .show_image {
+		  left: -200%; }
+
+		.bannerbar {
+		  position: absolute;
+		  bottom: 0px;
+		  right: 0px;
+		  font-size: 0px; }
+
+		.bannerbar a {
+		  text-decoration: none;
+		  font-size: 16px;
+		  display: inline-block;
+		  width: 20px;
+		  height: 20px;
+		  text-align: center;
+		  background-color: rgba(00, 00, 00, 0.5);
+		  color: #fff;
+		  margin-left: 3px;
+		  cursor: pointer; }
+	</style>
+</head>
+<body>
+	<section class="part3">
+		<div class="banner">
+			<span id="img_1"></span>
+			<span id="img_2"></span>
+			<span id="img_3"></span>
+			<div class="show_image">
+				<span>
+					<img src="images/1.jpg"></span>
+				<span>
+					<img src="images/2.jpg"></span>
+				<span>
+					<img src="images/3.jpg"></span>
+			</div>
+			<div class="bannerbar">
+				<span>
+					<a href="#img_1">1</a>
+				</span>
+				<span>
+					<a href="#img_2">2</a>
+				</span>
+				<span>
+					<a href="#img_3">3</a>
+				</span>
+			</div>
+		</div>
+
+	</section>
+
+</body>
+</html>
